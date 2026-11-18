@@ -1,0 +1,113 @@
+{
+  "corr_eq_crypto_full": 0.454,
+  "corr_eq_crypto_stress": 0.598,
+  "corr_all_full": 0.2,
+  "corr_all_stress": 0.342,
+  "stress_dates": [
+    "2025-04-09",
+    "2025-04-11",
+    "2025-04-12",
+    "2025-04-13",
+    "2025-04-14",
+    "2025-04-10",
+    "2025-04-15",
+    "2024-09-19",
+    "2025-04-16",
+    "2025-04-17"
+  ],
+  "n_stress_dates": 46,
+  "clusters_full": {
+    "C1": [
+      "AU200.p",
+      "BTCUSD.pi",
+      "JP225.p",
+      "NAS100.p",
+      "SOLUSD.p",
+      "UK100.p"
+    ],
+    "C2": [
+      "USDCHF.pi",
+      "USDJPY.pi"
+    ],
+    "C3": [
+      "EURUSD.pi"
+    ],
+    "C4": [
+      "XAGUSD.pi"
+    ]
+  },
+  "clusters_stress": {
+    "C1": [
+      "AU200.p",
+      "BTCUSD.pi",
+      "JP225.p",
+      "NAS100.p",
+      "SOLUSD.p",
+      "UK100.p",
+      "USDCHF.pi",
+      "USDJPY.pi",
+      "XAGUSD.pi"
+    ],
+    "C2": [
+      "EURUSD.pi"
+    ]
+  },
+  "replay_flat": {
+    "final_equity": 5510.0,
+    "net_pnl": 3010.0,
+    "max_dd_usd": -129.3,
+    "max_dd_pct_of_peak": -2.35,
+    "n_skipped": 0,
+    "n_traded": 974
+  },
+  "replay_heat": {
+    "final_equity": 4837.0,
+    "net_pnl": 2337.0,
+    "max_dd_usd": -99.9,
+    "max_dd_pct_of_peak": -2.07,
+    "n_skipped": 54,
+    "n_traded": 920
+  },
+  "worst_cluster_days": [
+    {
+      "date": "2025-02-28",
+      "cluster": "C1",
+      "r": -3.2
+    },
+    {
+      "date": "2026-01-02",
+      "cluster": "C1",
+      "r": -3.1
+    },
+    {
+      "date": "2026-03-03",
+      "cluster": "C2",
+      "r": -3.1
+    },
+    {
+      "date": "2025-08-01",
+      "cluster": "C2",
+      "r": -3.1
+    },
+    {
+      "date": "2023-08-08",
+      "cluster": "C2",
+      "r": -3.1
+    },
+    {
+      "date": "2024-08-05",
+      "cluster": "C1",
+      "r": -3.0
+    },
+    {
+      "date": "2026-07-27",
+      "cluster": "C1",
+      "r": -2.2
+    },
+    {
+      "date": "2024-09-17",
+      "cluster": "C1",
+      "r": -2.2
+    }
+  ]
+}

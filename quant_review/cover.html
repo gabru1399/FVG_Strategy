@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  @page { size: 794px 1123px; margin: 0; }
+  :root {
+    --c-bg: #ffffff;
+    --c-accent: #88702a;
+    --c-mid: #786b44;
+    --c-text: #22211f;
+    --c-muted: #8d8a83;
+    --c-surface: #eae9e6;
+  }
+  html, body { margin: 0; padding: 0; width: 794px; height: 1123px; background: var(--c-bg); font-family: 'Inter', sans-serif; }
+  @media screen {
+    html { height: auto; display: flex; justify-content: center; min-height: 100vh; background: #e8e8e8; }
+    body { transform-origin: top center; scale: min(1, calc(100vw / 794)); margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,0.15); }
+  }
+  .cover { position: relative; width: 794px; height: 1123px; border: none; outline: none; box-shadow: none; }
+
+  /* Layer 1: background grid, clipped */
+  .layer1 { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(120,107,68,0.05) 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, rgba(120,107,68,0.05) 0.5px, transparent 0.5px);
+    background-size: 50px 50px;
+  }
+
+  /* Layer 2: structure — ultra-thick left anchor line */
+  .layer2 { position: absolute; inset: 0; z-index: 2; }
+  .anchor-line { position: absolute; left: 95px; top: 112px; bottom: 112px; width: 6px; background: var(--c-mid); }
+
+  /* Layer 3: content */
+  .layer3 { position: absolute; inset: 0; z-index: 3; }
+  .kicker {
+    position: absolute; left: 142px; top: 168px;
+    font-size: 16px; font-weight: 400; letter-spacing: 4px;
+    color: var(--c-accent); text-transform: uppercase; opacity: 0.75;
+  }
+  .title {
+    position: absolute; left: 142px; top: 300px; max-width: 556px;
+    font-family: 'Playfair Display', serif;
+    font-size: 58px; font-weight: 900; line-height: 1.15; color: var(--c-text);
+  }
+  .summary {
+    position: absolute; left: 142px; top: 600px; max-width: 466px;
+    font-size: 16.5px; font-weight: 400; line-height: 1.65; color: var(--c-text); opacity: 0.85;
+  }
+  .meta {
+    position: absolute; left: 142px; top: 800px;
+    font-size: 17px; font-weight: 500; color: var(--c-text); line-height: 1.7;
+  }
+  .meta .sub { font-size: 14px; color: var(--c-muted); font-weight: 400; }
+  .footer {
+    position: absolute; left: 142px; bottom: 130px;
+    font-size: 13px; letter-spacing: 2.5px; color: var(--c-muted); text-transform: uppercase; opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+  <div class="cover">
+    <div class="layer1"><div class="grid"></div></div>
+    <div class="layer2"><div class="anchor-line"></div></div>
+    <div class="layer3">
+      <div class="kicker">Quantitative Strategy Review</div>
+      <div class="title">FVG Momentum<br>Alpha Basket<br>Optimization</div>
+      <div class="summary">
+        Full audit of the FVG_Strategy repository at commit 7117003: engine-integrity
+        findings, corrected simulation results on the 10-asset H1 basket, runner-exit
+        and risk-parity designs, meta-label filtering, and statistical validation of
+        the reported edge.
+      </div>
+      <div class="meta">
+        Repository: kbsingh1399/FVG_Strategy @ 7117003<br>
+        Account: MetaTrader 5, Blueberry Markets Raw ECN<br>
+        <span class="sub">Data: 32-instrument MT5 parquet set, 2023&ndash;2026</span>
+      </div>
+      <div class="footer">Z.ai Quantitative Review &middot; November 2026</div>
+    </div>
+  </div>
+</body>
+</html>

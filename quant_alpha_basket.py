@@ -86,9 +86,16 @@ def calculate_atr(df, period=14):
     atr = pd.Series(tr).ewm(span=period, adjust=False).mean().values
     return atr
 
-def extract_setups(df_entry, df_htf, symbol):
+def extract_setups(df_entry, df_htf, symbol, honest_htf_merge=True):
     """
     Extracts high-conviction institutional FVG momentum setups with ATR normalization.
+
+    honest_htf_merge=True (default) shifts the 4H merge key to bar completion time
+    (time + 4H) so a 1H bar only ever joins a COMPLETED 4H bar. MT5 bars are
+    open-time stamped: the 4H bar stamped 08:00 is not knowable until 12:00, so
+    merging backward on raw stamps leaks the still-forming bar's EMA for up to
+    3 hours. Pass honest_htf_merge=False to reproduce the legacy (pre-fix) merge.
+    Measured across the basket: filter decision flips on only 0.14-0.24% of bars.
     """
     if len(df_entry) < 100 or len(df_htf) < 50:
         return None, pd.DataFrame()
@@ -115,6 +122,14 @@ def extract_setups(df_entry, df_htf, symbol):
     
     # Merge HTF indicators backwards
     htf_clean = df_htf[['time', 'ema20', 'ema50']].dropna()
+    if honest_htf_merge:
+        # FIX (F9): MT5 bars are open-time stamped; a 4H bar only becomes
+        # available 4h after its stamp. Shift the merge key to completion time
+        # so merge_asof never joins the still-forming 4H bar (lookahead removal).
+        htf_clean = htf_clean.copy()
+        # +4h is exact at any tick resolution; realign to the entry frame's
+        # dtype so merge_asof keys match (e.g. ms-stamped parquet data).
+        htf_clean['time'] = (htf_clean['time'] + pd.Timedelta(hours=4)).astype(df['time'].dtype)
     merged = pd.merge_asof(df, htf_clean, on='time', direction='backward')
     
     opens = merged['open'].values

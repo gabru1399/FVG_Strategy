@@ -101,3 +101,4 @@ $$\text{Lot Size} = \frac{\$10.00}{\text{Stop Loss Distance} \times \text{Tick V
 * `test_papers_synthesis.py`: Audit evaluating SSRN-6725880, SSRN-5002058 (Quantpedia), and SSRN-6858299.
 * `Blueberry_Data/`: Historical 1H, 4H, and 5M parquet files for 156 assets from Blueberry Markets MT5.
 * `FVG_Strategy.pdf`: Original research paper by Teghjot Singh Bindra.
+* `quant_review/`: Independent quantitative review package (16-page report PDF + reproducible pipeline). Corrected exit engine, correlation-clustered heat-budget sizer, meta-labeling study, and statistical validity tests (Deflated Sharpe, PBO, walk-forward). Documents one engine fix: `extract_setups` now shifts the 4H merge key to bar completion time (`honest_htf_merge=True`, finding F9) so 1H bars never join a still-forming 4H bar. Start at `quant_review/README.md`.

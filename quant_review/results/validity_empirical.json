@@ -1,0 +1,80 @@
+{
+  "dsr": {
+    "sharpe": 3.17038601174904,
+    "skew": 0.16908182394031918,
+    "kurt": 3.5460135778544273,
+    "n": 45,
+    "dsr_p": 0.9983905551467285,
+    "sr_star_ann": 1.364095621402548,
+    "verdict": "PASS"
+  },
+  "pbo": {
+    "pbo": 0.0,
+    "n_combinations": 20,
+    "median_oos_rel_rank_of_is_best": 0.0,
+    "interpretation": "pbo>0.5 => selection is overfit more often than not"
+  },
+  "bootstrap": {
+    "expectancy": {
+      "mean": 0.309,
+      "p5": 0.225,
+      "p50": 0.311,
+      "p95": 0.391
+    },
+    "total_r": {
+      "mean": 300.909,
+      "p5": 219.134,
+      "p50": 302.599,
+      "p95": 380.659
+    },
+    "max_dd_r": {
+      "mean": -14.966,
+      "p5": -22.376,
+      "p50": -14.249,
+      "p95": -9.998
+    },
+    "prob_total_r_negative": 0.0
+  },
+  "walk_forward": [
+    {
+      "test_window": "[400:500]",
+      "test_trades": 100,
+      "test_expectancy_r": 0.117,
+      "test_total_r": 11.7
+    },
+    {
+      "test_window": "[500:600]",
+      "test_trades": 100,
+      "test_expectancy_r": 0.162,
+      "test_total_r": 16.2
+    },
+    {
+      "test_window": "[600:700]",
+      "test_trades": 100,
+      "test_expectancy_r": 0.264,
+      "test_total_r": 26.4
+    },
+    {
+      "test_window": "[700:800]",
+      "test_trades": 100,
+      "test_expectancy_r": 0.322,
+      "test_total_r": 32.2
+    },
+    {
+      "test_window": "[800:900]",
+      "test_trades": 100,
+      "test_expectancy_r": 0.747,
+      "test_total_r": 74.7
+    },
+    {
+      "test_window": "[900:974]",
+      "test_trades": 74,
+      "test_expectancy_r": 0.284,
+      "test_total_r": 21.0
+    }
+  ],
+  "n_negative_wf_windows": 0,
+  "n_wf_windows": 6,
+  "cfg_sharpes_mean": 3.57,
+  "cfg_sharpes_std": 0.68
+}

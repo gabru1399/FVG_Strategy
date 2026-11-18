@@ -1,0 +1,52 @@
+{
+  "NAS100.p": {
+    "mean_abs_diff_bps": 5.35,
+    "p95_abs_diff_bps": 13.25,
+    "filter_flip_rate_pct": 0.18
+  },
+  "BTCUSD.pi": {
+    "mean_abs_diff_bps": 10.59,
+    "p95_abs_diff_bps": 30.97,
+    "filter_flip_rate_pct": 0.16
+  },
+  "UK100.p": {
+    "mean_abs_diff_bps": 3.02,
+    "p95_abs_diff_bps": 7.64,
+    "filter_flip_rate_pct": 0.24
+  },
+  "AU200.p": {
+    "mean_abs_diff_bps": 3.13,
+    "p95_abs_diff_bps": 8.11,
+    "filter_flip_rate_pct": 0.22
+  },
+  "EURUSD.pi": {
+    "mean_abs_diff_bps": 1.79,
+    "p95_abs_diff_bps": 4.57,
+    "filter_flip_rate_pct": 0.2
+  },
+  "SOLUSD.p": {
+    "mean_abs_diff_bps": 17.09,
+    "p95_abs_diff_bps": 45.11,
+    "filter_flip_rate_pct": 0.17
+  },
+  "USDCHF.pi": {
+    "mean_abs_diff_bps": 2.01,
+    "p95_abs_diff_bps": 5.15,
+    "filter_flip_rate_pct": 0.22
+  },
+  "USDJPY.pi": {
+    "mean_abs_diff_bps": 2.48,
+    "p95_abs_diff_bps": 6.6,
+    "filter_flip_rate_pct": 0.14
+  },
+  "XAGUSD.pi": {
+    "mean_abs_diff_bps": 11.65,
+    "p95_abs_diff_bps": 33.75,
+    "filter_flip_rate_pct": 0.19
+  },
+  "JP225.p": {
+    "mean_abs_diff_bps": 5.97,
+    "p95_abs_diff_bps": 15.79,
+    "filter_flip_rate_pct": 0.18
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "EURUSD.pi": {
+    "n_5m": {
+      "n": 51,
+      "total_r": 16.3,
+      "pf": 2.14,
+      "max_dd_pct": -1.88,
+      "hit2r_pct": 31.4,
+      "avg_runner_r": 1.63
+    },
+    "n_1h_repo": {
+      "n": 51,
+      "total_r": 10.9,
+      "pf": 1.67,
+      "max_dd_pct": -1.94,
+      "hit2r_pct": 27.5,
+      "avg_runner_r": 1.67
+    },
+    "n_1h_honest": {
+      "n": 51,
+      "total_r": 22.7,
+      "pf": 2.23,
+      "max_dd_pct": -2.02,
+      "hit2r_pct": 43.1,
+      "avg_runner_r": 1.71
+    }
+  },
+  "USDJPY.pi": {
+    "n_5m": {
+      "n": 42,
+      "total_r": 27.1,
+      "pf": 3.21,
+      "max_dd_pct": -1.45,
+      "hit2r_pct": 26.2,
+      "avg_runner_r": 4.9
+    },
+    "n_1h_repo": {
+      "n": 42,
+      "total_r": 1.9,
+      "pf": 1.11,
+      "max_dd_pct": -2.46,
+      "hit2r_pct": 26.2,
+      "avg_runner_r": 1.12
+    },
+    "n_1h_honest": {
+      "n": 42,
+      "total_r": 12.7,
+      "pf": 1.69,
+      "max_dd_pct": -3.3,
+      "hit2r_pct": 23.8,
+      "avg_runner_r": 4.1
+    }
+  },
+  "BTCUSD.pi": {
+    "n_5m": {
+      "n": 25,
+      "total_r": 9.2,
+      "pf": 2.77,
+      "max_dd_pct": -0.8,
+      "hit2r_pct": 24.0,
+      "avg_runner_r": 2.64
+    },
+    "n_1h_repo": {
+      "n": 25,
+      "total_r": -1.8,
+      "pf": 0.78,
+      "max_dd_pct": -1.57,
+      "hit2r_pct": 16.0,
+      "avg_runner_r": 1.0
+    },
+    "n_1h_honest": {
+      "n": 25,
+      "total_r": 10.8,
+      "pf": 2.08,
+      "max_dd_pct": -1.17,
+      "hit2r_pct": 28.0,
+      "avg_runner_r": 3.93
+    }
+  },
+  "NAS100.p": {
+    "n_5m": {
+      "n": 41,
+      "total_r": 31.1,
+      "pf": 4.69,
+      "max_dd_pct": -0.79,
+      "hit2r_pct": 34.1,
+      "avg_runner_r": 3.51
+    },
+    "n_1h_repo": {
+      "n": 41,
+      "total_r": 10.8,
+      "pf": 1.81,
+      "max_dd_pct": -2.37,
+      "hit2r_pct": 36.6,
+      "avg_runner_r": 1.17
+    },
+    "n_1h_honest": {
+      "n": 41,
+      "total_r": 18.3,
+      "pf": 2.1,
+      "max_dd_pct": -2.31,
+      "hit2r_pct": 39.0,
+      "avg_runner_r": 2.35
+    }
+  }
+}
